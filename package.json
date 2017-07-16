@@ -1,0 +1,28 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "LIRI is a Language Interpretation and Recognition Interface. It is a command line node app that takes in parameters and gives the user back data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjthornberry/liri-node-app.git"
+  },
+  "keywords": [
+    "node",
+    "twitter",
+    "spotify",
+    "omdb",
+    "api",
+    "northwestern",
+    "bootcamp"
+  ],
+  "author": "Jake Thornberry <wjthornberry@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjthornberry/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/wjthornberry/liri-node-app#readme"
+}
