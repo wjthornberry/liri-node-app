@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/wjthornberry/liri-node-app/issues"
   },
-  "homepage": "https://github.com/wjthornberry/liri-node-app#readme"
+  "homepage": "https://github.com/wjthornberry/liri-node-app#readme",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
 }
