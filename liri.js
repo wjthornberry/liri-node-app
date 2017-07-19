@@ -28,7 +28,7 @@ switch (liriAction) {
     default: console.log("\r\n" + "Hello, I\'m LIRI. Perhaps you\'ve heard of my more famous cousin, SIRI? SIRI is a Speech Interpretation and Recognition Interface, while I am a _Language_ Interpretation and Recognition Interface. To utilize me, type 'node liri.js', enter a space, and then one of the following commands:" +"\r\n"+
         "1. my-tweets 'insert any Twitter handle here'>. For example, my-tweets @BarackObama"+"\r\n"+
         "2. spotify-this-song 'song name'>. Ex: spotify-this-song 'Girl from the North Country' (Song titles with more than one word must be enclosed in quotation marks)" +"\r\n"+
-        "3. movie-this <insert movie name>. Ex: movie-this 'Seven Samurai'. (Movie titles with more than one word must be enclosed in quotation marks)" +"\r\n"+);
+        "3. movie-this <insert movie name>. Ex: movie-this 'Seven Samurai'. (Movie titles with more than one word must be enclosed in quotation marks)" +"\r\n");
 };
 
 // FUNCTIONS
@@ -50,13 +50,13 @@ function myTweets() {
                 "---------------" + i + "---------------" + "\r\n";
                 console.log(twitterResults);
                 log(twitterResults);
-            } else {
+            } 
+        } else {
                 console.log("Error :"+ err);
                 return;
             }
-        }
-    });
-};
+        });
+    };
 
 
 // Open Movie Database (OMDb API)
