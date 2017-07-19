@@ -97,7 +97,7 @@ function movieThis() {
         if(!err && response.statusCode == 200) {
             var movieObject = JSON.parse(body);
             var movieResults =
-            "---------------" begin "---------------" + "\r\n"
+            "--------------- begin ---------------" + "\r\n"
             "Title: " + movieObject.Title+"\r\n"+
             "Year: " + movieObject.Year+"\r\n"+
             "IMDB rating: " + movieObject.imdbRating+"\r\n"+
@@ -106,7 +106,7 @@ function movieThis() {
             "Language: " + movieObject.Language+"\r\n"+
             "Plot: " + movieObject.Plot+"\r\n"+
             "Actors: " + movieObject.Actors+"\r\n" +
-            "---------------" + end + "---------------" + "\r\n";
+            "--------------- + end + ---------------" + "\r\n";
             console.log(movieResults);
             log(movieResults);
         } else {
@@ -132,43 +132,12 @@ function doWhatItSays() {
 
 // Log results function - Uses read and write to access 'log.txt' and 
 // writes everything that is returned to the terminal into 'log.txt'.
-
-
-
-
-
-
-// Open Movie Database (OMDb API)
-
-// Run the request function...
-// The request function takes in a URL then returns three arguments:
-// 1. It provides an error if one exists.
-// 2. It provides a response (usually that the request was successful)
-// 3. It provides the actual body text from the website.
-// request("http://www.omdbapi.com", function(error, response, body) {
-
-  // If the request was successful...
-//   if (!error && response.statusCode === 200) {
-
-    // Then log the body from the site!
-//     console.log(body);
-//   }
-// });
-
-// Bonus
-// 1) Output data to a .txt file
-// 2) Append each command ran to log.txt
-
-// This block of code will create a file called "log.txt".
-// It will then print "Inception, Die Hard" in the file
-// fs.writeFile("log.txt", "Inception, Die Hard", function(err) {
-
-  // If the code experiences any errors it will log the error to the console.
-//   if (err) {
-//     return console.log(err);
-//   }
-
-  // Otherwise, it will print: "log.txt was updated!"
-//   console.log("log.txt was updated!");
-
-// });
+function log(logResults) {
+    fs.appendFile('log.txt', logResults, (err) => {
+        if(err) {
+            return console.log(err);
+        } else {
+            console.log('log.txt was updated!')
+        }
+    });
+};
