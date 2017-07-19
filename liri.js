@@ -15,7 +15,7 @@ var spotify = require('spotify');
 // Pull  information from keys.js, where the Twitter API access keys are stored
 var keys = require("./keys.js");
 
-// Take in an input value
+// Take in input value
 var liriAction = process.argv[2];
 
 // LIRI commands
@@ -41,7 +41,7 @@ function myTweets() {
     };
     params = {screen_name: twitterUsername};
     client.get("statuses/user_timeline/", params, function(err, data, response) {
-        if(!error) {
+        if(!err) {
             for (var i = 0; i < data.length; i++) {
                 var twitterResults = 
                 "@" + data[i].user.screen_name + ": " +
@@ -85,6 +85,56 @@ function spotifySong() {
         }
     });
 };
+
+// OMDb function -- call OMDb API
+function movieThis() {
+    var movie = process.argv[3];
+    if(!movie) {
+        movie = "mr nobody";
+    }
+    params = movie;
+    request("http://www.omdapi.com/?t=" + params  + "&y=&plot=short&r=json&tomatoes=true", function (err, response, body) {
+        if(!err && response.statusCode == 200) {
+            var movieObject = JSON.parse(body);
+            var movieResults =
+            "---------------" begin "---------------" + "\r\n"
+            "Title: " + movieObject.Title+"\r\n"+
+            "Year: " + movieObject.Year+"\r\n"+
+            "IMDB rating: " + movieObject.imdbRating+"\r\n"+
+            "Rotten Tomatoes rating: " + movieObject.tomatoRating+"\r\n"+
+            "Country of Production: " + movieObject.Country+"\r\n"+
+            "Language: " + movieObject.Language+"\r\n"+
+            "Plot: " + movieObject.Plot+"\r\n"+
+            "Actors: " + movieObject.Actors+"\r\n" +
+            "---------------" + end + "---------------" + "\r\n";
+            console.log(movieResults);
+            log(movieResults);
+        } else {
+            console.log("Error: "+ err);
+            return;
+        }
+    });
+};
+
+// "Do What It Says" function - Uses the read and write module to access 'random.txt', 
+// LIRI runs a command from it
+
+function doWhatItSays() {
+    fs.readFile("random.txt", "utf8", function(err, data) {
+        if(!err) {
+            doWhatItSaysResults = data.split(",");
+            spotifySong(doWhatItSaysResults[0], doWhatItSaysResults[1]);
+        } else {
+            console.log("Error: " + err);
+        }
+    });
+};
+
+// Log results function - Uses read and write to access 'log.txt' and 
+// writes everything that is returned to the terminal into 'log.txt'.
+
+
+
 
 
 
