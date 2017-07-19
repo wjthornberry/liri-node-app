@@ -37,8 +37,25 @@ switch (liriAction) {
 function myTweets() {
     var twitterUsername = process.argv[3];
     if(!twitterUsername) {
-        twitterUsername = hal_bot_2001;
-    }
+        twitterUsername = 'hal_bot_2001';
+    };
+    params = {screen_name: twitterUsername};
+    client.get("statuses/user_timeline/", params, function(err, data, response) {
+        if (!error) {
+            for (var i = 0; i < data.length; i++) {
+                var twitterResults = 
+                "@" + data[i].user.screen_name + ": " +
+                data[i].text + "\r\n" +
+                data[i].created_at + "\r\n" +
+                "---------------" + i + "---------------" + "\r\n";
+                console.log(twitterResults);
+                log(twitterResults);
+            } else {
+                console.log("Error :"+ err);
+                return;
+            }
+        }
+    });
 };
 
 
