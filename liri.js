@@ -33,7 +33,7 @@ switch (liriAction) {
 
 // FUNCTIONS
 
-// Tweet function
+// Tweet function - call Twitter API
 function myTweets() {
     var twitterUsername = process.argv[3];
     if(!twitterUsername) {
@@ -41,7 +41,7 @@ function myTweets() {
     };
     params = {screen_name: twitterUsername};
     client.get("statuses/user_timeline/", params, function(err, data, response) {
-        if (!error) {
+        if(!error) {
             for (var i = 0; i < data.length; i++) {
                 var twitterResults = 
                 "@" + data[i].user.screen_name + ": " +
@@ -52,11 +52,40 @@ function myTweets() {
                 log(twitterResults);
             } 
         } else {
-                console.log("Error :"+ err);
-                return;
+            console.log("Error :"+ err);
+            return;
             }
         });
-    };
+};
+
+// Spotify function - call Spotify API
+function spotifySong() {
+    var songName = process.argv[3];
+    if(!songName) {
+        songName = 'The Sign Ace of Base';
+    }
+    params = songName;
+    spotify.search({type: "track", query: params}, function(err, data) {
+        if(!err) {
+            var songInfo = data.tracks.items;
+            for (var i = 0; i < 5; i++) {
+                if (songInfo[i] != undefined) {
+                    var spotifyResults = 
+                    "Artist(s): " + songInfo[i].artists[0].name +  "\r\n" +
+                    "Song: " + songInfo[i].name + "\r\n" +
+                    "Preview URL: " + songInfo[i].preview_url + "\r\n" +
+                    "Album: " + songInfo[i].album.name + "\r\n" +
+                    "---------------" + i + "---------------" + "\r\n";
+                    console.log(spotifyResults);
+                    log(spotifyResults);
+                }          
+            }
+        } else {
+            console.log("Error: " + err);
+        }
+    });
+};
+
 
 
 // Open Movie Database (OMDb API)
