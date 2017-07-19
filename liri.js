@@ -19,7 +19,6 @@ var keys = require("./keys.js");
 var liriAction = process.argv[2];
 
 // LIRI commands
-
 switch (liriAction) {
     case "my-tweets": myTweets(); break;
     case "spotify-this-song": spotifySong(); break;
@@ -30,7 +29,17 @@ switch (liriAction) {
         "1. my-tweets 'insert any Twitter handle here'>. For example, my-tweets @BarackObama"+"\r\n"+
         "2. spotify-this-song 'song name'>. Ex: spotify-this-song 'Girl from the North Country' (Song titles with more than one word must be enclosed in quotation marks)" +"\r\n"+
         "3. movie-this <insert movie name>. Ex: movie-this 'Seven Samurai'. (Movie titles with more than one word must be enclosed in quotation marks)" +"\r\n"+);
-}
+};
+
+// FUNCTIONS
+
+// Tweet function
+function myTweets() {
+    var twitterUsername = process.argv[3];
+    if(!twitterUsername) {
+        twitterUsername = hal_bot_2001;
+    }
+};
 
 
 // Open Movie Database (OMDb API)
