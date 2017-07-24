@@ -1,4 +1,3 @@
-// Import NPM packages
 
 // Readinga and writing files
 var fs = require('fs');
@@ -15,14 +14,24 @@ var spotify = require('node-spotify-api');
 // Pull  information from keys.js, where the Twitter API access keys are stored
 var keys = require("./keys.js");
 
+// Grab Twitter keys
+var twitterClient = keys.client;
+
+// Grab Spotify keys
+var spotify = keys.spotify;
+
 // Take in input value
 var liriAction = process.argv[2];
 
 // LIRI commands
 switch (liriAction) {
+    // Line 42
     case "my-tweets": myTweets(); break;
+    // Line 62
     case "spotify-this-song": spotifySong(); break;
+    // Line 91
     case "movie-this": movieThis(); break;
+    // Line 133
     case "do-what-it-says": doWhatItSays(); break;
     // User instructions in Terminal
     default: console.log("\r\n" + "Hello, I\'m LIRI. Perhaps you\'ve heard of my more famous cousin, SIRI? SIRI is a Speech Interpretation and Recognition Interface, while I am a _Language_ Interpretation and Recognition Interface. To utilize me, type 'node liri.js', enter a space, and then one of the following commands:" +"\r\n"+
@@ -35,28 +44,21 @@ switch (liriAction) {
 
 // Tweet function - call Twitter API
 function myTweets() {
-    var twitterUsername = process.argv[3];
-    if(!twitterUsername) {
-        twitterUsername = 'hal_bot_2001';
+    var params = {
+        screen_name: 'hal_bot_2001'
     };
-    params = {screen_name: twitterUsername};
-    client.get("statuses/user_timeline/", params, function(err, data, response) {
-        if(!err) {
-            for (var i = 0; i < data.length; i++) {
-                var twitterResults = 
-                "@" + data[i].user.screen_name + ": " +
-                data[i].text + "\r\n" +
-                data[i].created_at + "\r\n" +
-                "---------------" + i + "---------------" + "\r\n";
-                console.log(twitterResults);
-                log(twitterResults);
-            } 
-        } else {
-            console.log("Error :"+ err);
-            return;
+    twitterClient.get('statuses/user_timeline', params, function(err, tweets, response) {
+        if (!err) {
+            for (var i = 0; i < tweets.length; i++) {
+                console.log(`\nTweet ${i + 1}: ${tweets[i].text}`);
+                console.log(`Date: ${tweets[i].created_at}`);
+                console.log('\n---------------');
             }
-        });
-};
+        } else {
+            console.log('Error: ' + err);
+        }
+    });
+}
 
 // Spotify function - call Spotify API
 function spotifySong() {
@@ -84,37 +86,35 @@ function spotifySong() {
             console.log("Error: " + err);
         }
     });
-};
+}
 
 // OMDb function -- call OMDb API
 function movieThis() {
     var movie = process.argv[3];
     if(!movie) {
-        movie = "mr nobody";
+        movie = 'mr nobody';
     }
-    params = movie;
-    request("http://www.omdapi.com/?t=" + params  + "&y=&plot=short&r=json&tomatoes=true", function (err, response, body) {
-        if(!err && response.statusCode == 200) {
-            var movieObject = JSON.parse(body);
-            var movieResults =
-            "--------------- begin ---------------" + "\r\n"
-            "Title: " + movieObject.Title+"\r\n"+
-            "Year: " + movieObject.Year+"\r\n"+
-            "IMDB rating: " + movieObject.imdbRating+"\r\n"+
-            "Rotten Tomatoes rating: " + movieObject.tomatoRating+"\r\n"+
-            "Country of Production: " + movieObject.Country+"\r\n"+
-            "Language: " + movieObject.Language+"\r\n"+
-            "Plot: " + movieObject.Plot+"\r\n"+
-            "Actors: " + movieObject.Actors+"\r\n" +
-            "--------------- + end + ---------------" + "\r\n";
-            console.log(movieResults);
-            log(movieResults);
-        } else {
-            console.log("Error: "+ err);
-            return;
+        params = movie
+        request('http://www.omdbapi.com/?apikey=40e9cece&t=' + params + '&tomatoes=true&r=json', function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            jsonBody = JSON.parse(body);
+            console.log(' ');
+            console.log('Title: ' + jsonBody.Title);
+            console.log('Year: ' + jsonBody.Year);
+            console.log('IMDb Rating: ' + jsonBody.imdbRating);
+            console.log('Country: ' + jsonBody.Country);
+            console.log('Language: ' + jsonBody.Language);
+            console.log('Plot: ' + jsonBody.Plot);
+            console.log('Actors: ' + jsonBody.Actors);
+            console.log('Rotten Tomatoes Rating: ' + jsonBody.tomatoRating);
+            console.log('Rotten Tomatoes URL: ' + jsonBody.tomatoURL);
+            console.log(' ');
+            fs.appendFile('log.txt', ('=============== LOG ENTRY BEGIN ===============\r\n' + Date() + '\r\n \r\nTERMINAL COMMANDS: ' + process.argv + '\r\nDATA OUTPUT:\r\n' + 'Title: ' + jsonBody.Title + '\r\nYear: ' + jsonBody.Year + '\r\nIMDb Rating: ' + jsonBody.imdbRating + '\r\nCountry: ' + jsonBody.Country + '\r\nLanguage: ' + jsonBody.Language + '\r\nPlot: ' + jsonBody.Plot + '\r\nActors: ' + jsonBody.Actors + '\r\nRotten Tomatoes Rating: ' + jsonBody.tomatoRating + '\r\nRotten Tomatoes URL: ' + jsonBody.tomatoURL + '\r\n =============== LOG ENTRY END ===============\r\n \r\n'), function(err) {
+                if (err) throw err;
+            });
         }
     });
-};
+}           
 
 // "Do What It Says" function - Uses the read and write module to access 'random.txt', 
 // LIRI runs a command from it
