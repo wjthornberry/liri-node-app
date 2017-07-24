@@ -114,8 +114,8 @@ function movieThis() {
             });
         }
     });
-}           
-
+}
+            
 // "Do What It Says" function - Uses the read and write module to access 'random.txt', 
 // LIRI runs a command from it
 
