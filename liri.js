@@ -10,7 +10,7 @@ var request = require('request');
 var twitter = require('twitter');
 
 // Spotify API
-var spotify = require('spotify');
+var spotify = require('node-spotify-api');
 
 // Pull  information from keys.js, where the Twitter API access keys are stored
 var keys = require("./keys.js");
