@@ -1,0 +1,166 @@
+Artist(s): Ludwig van Beethoven
+Song: Sonata No. 14 "Moonlight" in C-Sharp Minor", Op. 27 No. 2: I. Adagio sostenuto
+Preview URL: https://p.scdn.co/mp3-preview/7c2b7bbe98f908c395f2c7517760707a20bac794?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Beethoven: Piano Sonatas, Vol.3
+---------------0---------------
+Artist(s): Ludwig van Beethoven
+Song: Moonlight Sonata
+Preview URL: https://p.scdn.co/mp3-preview/4cebfccfa07fe78250dc19a35ce94feb5f7c269a?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Piano Clásico
+---------------1---------------
+Artist(s): Ludwig van Beethoven
+Song: Piano Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 "Moonlight": I. Adagio sostenuto
+Preview URL: https://p.scdn.co/mp3-preview/b687e7b9ad5bfd8cf83c662f765c11ef313d05dd?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Beethoven: Piano Sonatas Nos. 8, 14 and 23
+---------------2---------------
+Artist(s): Bedtime Baby
+Song: Moonlight Sonata
+Preview URL: https://p.scdn.co/mp3-preview/cac476097aaacdcbabfbb76ee8c0594238ac0fa6?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Baby Music: Help Your Baby Sleep Through The Night
+---------------3---------------
+Artist(s): Ludwig van Beethoven
+Song: Piano Sonata No. 14 In C Sharp Minor, Op. 27 No. 2 -"Moonlight" : 1. Adagio sostenuto
+Preview URL: null
+Album: Moonlight Sonata - The Greatest Piano Sonatas
+---------------4---------------
+=============== LOG ENTRY BEGIN ===============
+Mon Jul 24 2017 00:12:56 GMT-0500 (CDT)
+ 
+TERMINAL COMMANDS: /usr/local/Cellar/node/8.1.2/bin/node,/Users/jakethornberry/Dev/nu-boot-camp/My Folders/10-node/liri-node-app/liri.js,movie-this,Seven Samurai
+DATA OUTPUT:
+Title: Seven Samurai
+Year: 1954
+IMDb Rating: 8.7
+Country: Japan
+Language: Japanese
+Plot: A poor village under attack by bandits recruits seven unemployed samurai to help them defend themselves.
+Actors: Toshirô Mifune, Takashi Shimura, Keiko Tsushima, Yukiko Shimazaki
+Rotten Tomatoes Rating: N/A
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/1018639-seven_samurai/
+ =============== LOG ENTRY END ===============
+ 
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------0---------------
+Artist(s): Ace of Base
+Song: All That She Wants
+Preview URL: https://p.scdn.co/mp3-preview/b176774bc04182501c2d5d201afda143b1193f31?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------1---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Greatest Hits
+---------------2---------------
+Artist(s): Ace of Base
+Song: Don't Turn Around
+Preview URL: https://p.scdn.co/mp3-preview/9c8401c8142bdd011e51f0211be2e2d4afcd5cff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------3---------------
+Artist(s): Ace of Base
+Song: Wheel of Fortune
+Preview URL: https://p.scdn.co/mp3-preview/fd501a60ee611fda1dbb1c238d802fece5880dfc?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------4---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------0---------------
+Artist(s): Ace of Base
+Song: All That She Wants
+Preview URL: https://p.scdn.co/mp3-preview/b176774bc04182501c2d5d201afda143b1193f31?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------1---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Greatest Hits
+---------------2---------------
+Artist(s): Ace of Base
+Song: Don't Turn Around
+Preview URL: https://p.scdn.co/mp3-preview/9c8401c8142bdd011e51f0211be2e2d4afcd5cff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------3---------------
+Artist(s): Ace of Base
+Song: Wheel of Fortune
+Preview URL: https://p.scdn.co/mp3-preview/fd501a60ee611fda1dbb1c238d802fece5880dfc?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------4---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------0---------------
+Artist(s): Ace of Base
+Song: All That She Wants
+Preview URL: https://p.scdn.co/mp3-preview/b176774bc04182501c2d5d201afda143b1193f31?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------1---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Greatest Hits
+---------------2---------------
+Artist(s): Ace of Base
+Song: Don't Turn Around
+Preview URL: https://p.scdn.co/mp3-preview/9c8401c8142bdd011e51f0211be2e2d4afcd5cff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------3---------------
+Artist(s): Ace of Base
+Song: Wheel of Fortune
+Preview URL: https://p.scdn.co/mp3-preview/fd501a60ee611fda1dbb1c238d802fece5880dfc?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------4---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------0---------------
+Artist(s): Ace of Base
+Song: All That She Wants
+Preview URL: https://p.scdn.co/mp3-preview/b176774bc04182501c2d5d201afda143b1193f31?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------1---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Greatest Hits
+---------------2---------------
+Artist(s): Ace of Base
+Song: Don't Turn Around
+Preview URL: https://p.scdn.co/mp3-preview/9c8401c8142bdd011e51f0211be2e2d4afcd5cff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------3---------------
+Artist(s): Ace of Base
+Song: Wheel of Fortune
+Preview URL: https://p.scdn.co/mp3-preview/fd501a60ee611fda1dbb1c238d802fece5880dfc?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------4---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------0---------------
+Artist(s): Ace of Base
+Song: All That She Wants
+Preview URL: https://p.scdn.co/mp3-preview/b176774bc04182501c2d5d201afda143b1193f31?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------1---------------
+Artist(s): Ace of Base
+Song: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: Greatest Hits
+---------------2---------------
+Artist(s): Ace of Base
+Song: Don't Turn Around
+Preview URL: https://p.scdn.co/mp3-preview/9c8401c8142bdd011e51f0211be2e2d4afcd5cff?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------3---------------
+Artist(s): Ace of Base
+Song: Wheel of Fortune
+Preview URL: https://p.scdn.co/mp3-preview/fd501a60ee611fda1dbb1c238d802fece5880dfc?cid=c9d34ad9c1564802838cec8d2853b89a
+Album: The Sign (US Album) [Remastered]
+---------------4---------------
