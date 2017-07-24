@@ -1,10 +1,10 @@
 console.log('this is loaded');
 
 // Twitter NPM 
-const Twitter = require('twitter');
+var Twitter = require('twitter');
 
 // Spotify NPM
-const Spotify = require('node-spotify-api');
+var Spotify = require('node-spotify-api');
 
 // new Twitter client for liri.js
 var client = new Twitter({
@@ -15,8 +15,8 @@ var client = new Twitter({
 });
 
 var spotify = new Spotify({
-  consumer_key: 'c9d34ad9c1564802838cec8d2853b89a',
-  consumer_secret: '1dcd1a31221a492488eddb249833648b', 
+  id: 'c9d34ad9c1564802838cec8d2853b89a',
+  secret: '1dcd1a31221a492488eddb249833648b', 
 });
 
 //export keys
